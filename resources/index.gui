@@ -1,3 +1,20 @@
 <svg class="background">
+  <svg class="hrArea">
+    <image href="heart.png" x="0" y="0" id="h1" />
+    <image href="heart.png" x="30" y="0" id="h2"/>
+    <image href="heart.png" x="60" y="0" id="h3"/>
+    <image href="heart.png" x="90" y="0" id="h4"/>
+    <image href="heart.png" x="120" y="0" id="h5"/>
+    <image href="heart.png" x="0" y="30" id="h6"/>
+    <image href="heart.png" x="30" y="30" id="h7"/>
+    <image href="heart.png" x="60" y="30" id="h8"/> 
+    <image href="heart.png" x="90" y="30" id="h9"/>
+    <image href="heart.png" x="120" y="30" id="h10"/>
+    <image href="heart.png" x="0" y="60" id="h11"/>
+    <image href="heart.png" x="30" y="60" id="h12"/>
+    <image href="heart.png" x="60" y="60" id="h13"/> 
+    <image href="heart.png" x="90" y="60" id="h14"/>
+    <image href="heart.png" x="120" y="60" id="h15"/>
+  </svg>
   <text id="myLabel" />
 </svg>
