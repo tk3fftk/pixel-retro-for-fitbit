@@ -5,7 +5,8 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@fitbit/sdk": "~4.1.0",
-    "@fitbit/sdk-cli": "^1.7.1"
+    "@fitbit/sdk-cli": "^1.7.1",
+    "prettier": "2.0.2"
   },
   "fitbit": {
     "appUUID": "cfe36a3e-2d62-47ba-ae43-2de7a90300c7",
@@ -14,7 +15,8 @@
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
-      "access_heart_rate"
+      "access_heart_rate",
+      "access_activity"
     ],
     "buildTargets": [
       "higgs",

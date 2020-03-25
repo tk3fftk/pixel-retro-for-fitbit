@@ -16,5 +16,13 @@
     <image href="heart.png" x="90" y="60" id="h14"/>
     <image href="heart.png" x="120" y="60" id="h15"/>
   </svg>
+  <svg class="scoreArea">
+    <image href="16x16_S.png" x="30" y="0"/>
+    <image href="16x16_C.png" x="45" y="0"/>
+    <image href="16x16_O.png" x="60" y="0"/>
+    <image href="16x16_R.png" x="75" y="0"/>
+    <image href="16x16_E.png" x="90" y="0"/>
+    <text id="score" x="65" y="50" />
+  </svg>
   <text id="myLabel" />
 </svg>

@@ -13,7 +13,22 @@
 }
 
 .hrArea {
+  x: 0%;
+  y: 0%;
   height: 10%;
   width: 10%;
-  viewport-fill: black;
+}
+
+.scoreArea {
+  x: 52%;
+  y: 0%;
+  height: 5%;
+  width: 5%;
+}
+
+#score {
+  fill: white;
+  text-length: 5;
+  font-family: System-Regular;
+  text-anchor: middle;
 }

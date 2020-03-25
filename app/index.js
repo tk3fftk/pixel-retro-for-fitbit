@@ -3,20 +3,23 @@ import document from 'document';
 import { preferences } from 'user-settings';
 import * as util from '../common/utils';
 import { HeartRateSensor } from 'heart-rate';
+import { today } from 'user-activity';
+
 let currentHR = 0;
 
 if (HeartRateSensor) {
   const hrm = new HeartRateSensor({ frequency: 1 });
-  hrm.addEventListener("reading", () => {
+  hrm.addEventListener('reading', () => {
     currentHR = hrm.heartRate;
     const numberOfHeart = currentHR / 10;
     console.log(`Current heart rate: ${currentHR}`);
 
     for (let i = 1; i <= 15; i++) {
-      const isHidden = numberOfHeart >= i ? "visible" : "hidden";
+      const isHidden = numberOfHeart >= i ? 'visible' : 'hidden';
       document.getElementById(`h${i}`).style.visibility = isHidden;
     }
 
+    document.getElementById('score').text = today.adjusted.steps;
   });
   hrm.start();
 }
