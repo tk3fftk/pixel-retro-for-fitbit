@@ -2,28 +2,30 @@
   viewport-fill: black;
 }
 
-#myLabel {
+.clock {
   font-size: 80;
   font-family: System-Bold;
   text-length: 32;
   text-anchor: middle;
-  x: 50%;
-  y: 50%+40;
+  x: 8%;
+  y: 50%;
   fill: white;
+  height: 64;
+  width: 64;
 }
 
 .hrArea {
   x: 0%;
   y: 0%;
-  height: 10%;
-  width: 10%;
+  height: 32;
+  width: 32;
 }
 
 .scoreArea {
-  x: 52%;
+  x: 53%;
   y: 0%;
-  height: 5%;
-  width: 5%;
+  height: 16;
+  width: 16;
 }
 
 #score {
