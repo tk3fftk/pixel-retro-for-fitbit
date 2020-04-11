@@ -12,6 +12,10 @@ const score2 = document.getElementById('score2');
 const score3 = document.getElementById('score3');
 const score4 = document.getElementById('score4');
 const score5 = document.getElementById('score5');
+const hours1 = document.getElementById('hours1');
+const hours2 = document.getElementById('hours2');
+const minutes1 = document.getElementById('minutes1');
+const minutes2 = document.getElementById('minutes2');
 
 let currentHR = 0;
 
@@ -37,17 +41,18 @@ clock.granularity = 'minutes';
 
 // Update the <text> element every tick with the current time
 clock.ontick = evt => {
-  let today = evt.date;
-  let hours = today.getHours();
+  const d = evt.date;
+  const hours = d.getHours();
   if (preferences.clockDisplay === '12h') {
     // 12h format
     hours = hours % 12 || 12;
-  } else {
-    // 24h format
-    hours = util.zeroPad(hours);
   }
-  let mins = util.zeroPad(today.getMinutes());
-  myLabel.text = `${hours}:${mins}`;
+  // const mins = util.zeroPad(d.getMinutes());
+  const mins = d.getMinutes();
+  setOne(mins, minutes1);
+  setTen(mins, minutes2);
+  setOne(hours, hours1);
+  setTen(hours, hours2);
 };
 
 function updateScore() {

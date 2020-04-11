@@ -29,9 +29,9 @@
     <image id="score1" href="32x32_0.png" x="94" y="16"/>
   </svg>
   <svg class="clock">
-    <image href="32x32_0.png" x="0" y="0"/>
-    <image href="32x32_0.png" x="64" y="0"/>
-    <image href="32x32_0.png" x="128" y="0"/>
-    <image href="32x32_0.png" x="192" y="0"/>
+    <image id="hours2" href="32x32_0.png" x="0" y="0"/>
+    <image id="hours1" href="32x32_0.png" x="64" y="0"/>
+    <image id="minutes1" href="32x32_0.png" x="128" y="0"/>
+    <image id="minutes2" href="32x32_0.png" x="192" y="0"/>
   </svg>
 </svg>
