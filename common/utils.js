@@ -5,7 +5,3 @@ export function zeroPad(i) {
   }
   return i;
 }
-
-export function hoge() {
-  return 'hoge';
-}

@@ -27,10 +27,3 @@
   height: 16;
   width: 16;
 }
-
-#score {
-  fill: white;
-  text-length: 5;
-  font-family: System-Regular;
-  text-anchor: middle;
-}

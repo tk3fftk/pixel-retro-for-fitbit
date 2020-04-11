@@ -24,7 +24,6 @@ if (HeartRateSensor) {
   hrm.addEventListener('reading', () => {
     currentHR = hrm.heartRate;
     const numberOfHeart = currentHR / 10;
-    console.log(`Current heart rate: ${currentHR}`);
 
     for (let i = 1; i <= 15; i++) {
       const isHidden = numberOfHeart >= i ? 'visible' : 'hidden';
