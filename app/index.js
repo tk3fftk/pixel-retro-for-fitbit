@@ -29,8 +29,8 @@ if (HeartRateSensor) {
     const numberOfHeart = currentHR / 10;
 
     for (let i = 1; i <= 15; i++) {
-      const isHidden = numberOfHeart >= i ? 'visible' : 'hidden';
-      document.getElementById(`h${i}`).style.visibility = isHidden;
+      document.getElementById(`h${i}`).style.visibility =
+        numberOfHeart >= i ? 'visible' : 'hidden';
     }
   });
   hrm.start();

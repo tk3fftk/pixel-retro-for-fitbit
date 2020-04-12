@@ -1,20 +1,20 @@
 <svg class="background">
   <svg id="hrArea">
-    <image id="h1" href="heart.png" x="0" y="0"/>
-    <image id="h2" href="heart.png" x="32" y="0"/>
-    <image id="h3" href="heart.png" x="64" y="0"/>
-    <image id="h4" href="heart.png" x="96" y="0"/>
-    <image id="h5" href="heart.png" x="128" y="0"/>
-    <image id="h6" href="heart.png" x="0" y="32"/>
-    <image id="h7" href="heart.png" x="32" y="32"/>
-    <image id="h8" href="heart.png" x="64" y="32"/>
-    <image id="h9" href="heart.png" x="96" y="32"/>
-    <image id="h10" href="heart.png" x="128" y="32"/>
-    <image id="h11" href="heart.png" x="0" y="64"/>
-    <image id="h12" href="heart.png" x="32" y="64"/>
-    <image id="h13" href="heart.png" x="64" y="64"/>
-    <image id="h14" href="heart.png" x="96" y="64"/>
-    <image id="h15" href="heart.png" x="128" y="64"/>
+    <image id="h1" href="heart.png" class="heart" x="0" y="0"/>
+    <image id="h2" href="heart.png" class="heart" x="32" y="0"/>
+    <image id="h3" href="heart.png" class="heart" x="64" y="0"/>
+    <image id="h4" href="heart.png" class="heart" x="96" y="0"/>
+    <image id="h5" href="heart.png" class="heart" x="128" y="0"/>
+    <image id="h6" href="heart.png" class="heart" x="0" y="32"/>
+    <image id="h7" href="heart.png" class="heart" x="32" y="32"/>
+    <image id="h8" href="heart.png" class="heart" x="64" y="32"/>
+    <image id="h9" href="heart.png" class="heart" x="96" y="32"/>
+    <image id="h10" href="heart.png" class="heart" x="128" y="32"/>
+    <image id="h11" href="heart.png" class="heart" x="0" y="64"/>
+    <image id="h12" href="heart.png" class="heart" x="32" y="64"/>
+    <image id="h13" href="heart.png" class="heart" x="64" y="64"/>
+    <image id="h14" href="heart.png" class="heart" x="96" y="64"/>
+    <image id="h15" href="heart.png" class="heart" x="128" y="64"/>
   </svg>
   <svg id="scoreArea">
     <image href="16x16_S.png" x="30" y="0"/>

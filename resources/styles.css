@@ -17,8 +17,12 @@
 #hrArea {
   x: 0%;
   y: 0%;
+}
+
+.heart {
   height: 32;
   width: 32;
+  visibility: hidden;
 }
 
 #scoreArea {
