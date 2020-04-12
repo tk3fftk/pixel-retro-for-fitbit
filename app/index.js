@@ -4,6 +4,8 @@ import { preferences } from 'user-settings';
 import * as util from '../common/utils';
 import { HeartRateSensor } from 'heart-rate';
 import { today } from 'user-activity';
+import { display } from 'display';
+import { me } from 'appbit';
 
 const imageNamePrefix = '32x32_';
 const imageExtension = '.png';
@@ -18,9 +20,10 @@ const minutes1 = document.getElementById('minutes1');
 const minutes2 = document.getElementById('minutes2');
 
 let currentHR = 0;
+let hrm;
 
 if (HeartRateSensor) {
-  const hrm = new HeartRateSensor({ frequency: 1 });
+  hrm = new HeartRateSensor({ frequency: 1 });
   hrm.addEventListener('reading', () => {
     currentHR = hrm.heartRate;
     const numberOfHeart = currentHR / 10;
@@ -29,10 +32,10 @@ if (HeartRateSensor) {
       const isHidden = numberOfHeart >= i ? 'visible' : 'hidden';
       document.getElementById(`h${i}`).style.visibility = isHidden;
     }
-
-    updateScore();
   });
   hrm.start();
+} else {
+  document.getElementById('hrArea').style.display = 'none';
 }
 
 // Update the clock every minute
@@ -52,7 +55,30 @@ clock.ontick = evt => {
   setTen(mins, minutes2);
   setOne(hours, hours1);
   setTen(hours, hours2);
+
+  updateScore();
 };
+
+if (display.aodAvailable && me.permissions.granted('access_aod')) {
+  // tell the system we support AOD
+  display.aodAllowed = true;
+
+  // respond to display change events
+  display.addEventListener('change', () => {
+    // Is AOD inactive and the display is on?
+    if (!display.aodActive && display.on && HeartRateSensor) {
+      // Show elements & start sensors
+      // someElement.style.display = "inline";
+      hrm.start();
+      document.getElementById('hrArea').style.display = 'inline';
+    } else {
+      // Hide elements & stop sensors
+      // someElement.style.display = "none";
+      hrm.stop();
+      document.getElementById('hrArea').style.display = 'none';
+    }
+  });
+}
 
 function updateScore() {
   const steps = today.adjusted.steps;
