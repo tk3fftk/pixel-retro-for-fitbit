@@ -1,5 +1,5 @@
 <svg class="background">
-  <svg class="hrArea">
+  <svg id="hrArea">
     <image id="h1" href="heart.png" x="0" y="0"/>
     <image id="h2" href="heart.png" x="32" y="0"/>
     <image id="h3" href="heart.png" x="64" y="0"/>
