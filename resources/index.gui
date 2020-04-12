@@ -16,7 +16,7 @@
     <image id="h14" href="heart.png" x="96" y="64"/>
     <image id="h15" href="heart.png" x="128" y="64"/>
   </svg>
-  <svg class="scoreArea">
+  <svg id="scoreArea">
     <image href="16x16_S.png" x="30" y="0"/>
     <image href="16x16_C.png" x="46" y="0"/>
     <image href="16x16_O.png" x="62" y="0"/>

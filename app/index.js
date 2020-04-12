@@ -71,11 +71,13 @@ if (display.aodAvailable && me.permissions.granted('access_aod')) {
       // someElement.style.display = "inline";
       hrm.start();
       document.getElementById('hrArea').style.display = 'inline';
+      document.getElementById('scoreArea').style.display = 'inline';
     } else {
       // Hide elements & stop sensors
       // someElement.style.display = "none";
       hrm.stop();
       document.getElementById('hrArea').style.display = 'none';
+      document.getElementById('scoreArea').style.display = 'none';
     }
   });
 }

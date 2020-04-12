@@ -21,7 +21,7 @@
   width: 32;
 }
 
-.scoreArea {
+#scoreArea {
   x: 53%;
   y: 0%;
   height: 16;
