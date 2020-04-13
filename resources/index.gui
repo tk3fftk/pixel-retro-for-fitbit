@@ -17,28 +17,28 @@
     <image id="h15" href="heart.png" class="heart" x="128" y="64"/>
   </svg>
     <svg id="stageArea">
-    <image href="16x16_S.png" x="30" y="0"/>
-    <image href="16x16_T.png" x="46" y="0"/>
-    <image href="16x16_A.png" x="62" y="0"/>
-    <image href="16x16_G.png" x="78" y="0"/>
-    <image href="16x16_E.png" x="94" y="0"/>
-    <image id="month2" href="32x32_0.png" x="30" y="16"/>
-    <image id="month1" href="32x32_0.png" x="46" y="16"/>
-    <image href="16x16_-.png" x="62" y="16"/>
-    <image id="date2" href="32x32_0.png" x="78" y="16"/>
-    <image id="date1" href="32x32_0.png" x="94" y="16"/>
+    <image href="16x16_S.png" class="font-small" x="30" y="0"/>
+    <image href="16x16_T.png" class="font-small" x="46" y="0"/>
+    <image href="16x16_A.png" class="font-small" x="62" y="0"/>
+    <image href="16x16_G.png" class="font-small" x="78" y="0"/>
+    <image href="16x16_E.png" class="font-small" x="94" y="0"/>
+    <image id="month2" href="32x32_0.png" class="font-small" x="30" y="16"/>
+    <image id="month1" href="32x32_0.png" class="font-small"x="46" y="16"/>
+    <image href="16x16_-.png" class="font-small" x="62" y="16"/>
+    <image id="date2" href="32x32_0.png" class="font-small" x="78" y="16"/>
+    <image id="date1" href="32x32_0.png" class="font-small" x="94" y="16"/>
   </svg>
   <svg id="scoreArea">
-    <image href="16x16_S.png" x="30" y="32"/>
-    <image href="16x16_C.png" x="46" y="32"/>
-    <image href="16x16_O.png" x="62" y="32"/>
-    <image href="16x16_R.png" x="78" y="32"/>
-    <image href="16x16_E.png" x="94" y="32"/>
-    <image id="score5" href="32x32_0.png" x="30" y="48"/>
-    <image id="score4" href="32x32_0.png" x="46" y="48"/>
-    <image id="score3" href="32x32_0.png" x="62" y="48"/>
-    <image id="score2" href="32x32_0.png" x="78" y="48"/>
-    <image id="score1" href="32x32_0.png" x="94" y="48"/>
+    <image href="16x16_S.png" class="font-small" x="30" y="32"/>
+    <image href="16x16_C.png" class="font-small" x="46" y="32"/>
+    <image href="16x16_O.png" class="font-small" x="62" y="32"/>
+    <image href="16x16_R.png" class="font-small" x="78" y="32"/>
+    <image href="16x16_E.png" class="font-small" x="94" y="32"/>
+    <image id="score5" href="32x32_0.png" class="font-small" x="30" y="48"/>
+    <image id="score4" href="32x32_0.png" class="font-small" x="46" y="48"/>
+    <image id="score3" href="32x32_0.png" class="font-small" x="62" y="48"/>
+    <image id="score2" href="32x32_0.png" class="font-small" x="78" y="48"/>
+    <image id="score1" href="32x32_0.png" class="font-small" x="94" y="48"/>
   </svg>
   <svg class="clock">
     <image id="hours2" href="32x32_0.png" x="0" y="0"/>
