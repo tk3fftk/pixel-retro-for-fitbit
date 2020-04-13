@@ -18,6 +18,10 @@ const hours1 = document.getElementById('hours1');
 const hours2 = document.getElementById('hours2');
 const minutes1 = document.getElementById('minutes1');
 const minutes2 = document.getElementById('minutes2');
+const month1 = document.getElementById('month1');
+const month2 = document.getElementById('month2');
+const date1 = document.getElementById('date1');
+const date2 = document.getElementById('date2');
 
 let hrm;
 let body;
@@ -55,20 +59,24 @@ if (BodyPresenceSensor) {
 // Update the clock every minute
 clock.granularity = 'minutes';
 
-// Update the <text> element every tick with the current time
 clock.ontick = evt => {
   const d = evt.date;
+  const mins = d.getMinutes();
   const hours = d.getHours();
+  const date = d.getDate();
+  const month = d.getMonth() + 1;
   if (preferences.clockDisplay === '12h') {
     // 12h format
     hours = hours % 12 || 12;
   }
-  // const mins = util.zeroPad(d.getMinutes());
-  const mins = d.getMinutes();
   setOne(mins, minutes1);
   setTen(mins, minutes2);
   setOne(hours, hours1);
   setTen(hours, hours2);
+  setOne(date, date1);
+  setTen(date, date2);
+  setOne(month, month1);
+  setTen(month, month2);
 
   updateScore();
 };

@@ -25,6 +25,13 @@
   visibility: hidden;
 }
 
+#stageArea {
+  x: 53%;
+  y: 0%;
+  height: 16;
+  width: 16;
+}
+
 #scoreArea {
   x: 53%;
   y: 0%;
