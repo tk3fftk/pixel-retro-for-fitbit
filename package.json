@@ -20,7 +20,6 @@
       "access_aod"
     ],
     "buildTargets": [
-      "higgs",
       "meson",
       "gemini",
       "mira"
