@@ -2,7 +2,7 @@
 
 Pixel Retro Clock for Fitbit Versa
 
-![](./screenshot.png)
+<img src="./screenshot.png" width="400" />
 
 ## Description
 
