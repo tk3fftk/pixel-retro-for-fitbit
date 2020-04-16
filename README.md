@@ -22,4 +22,4 @@ Pixel Retro Clock is inspired by retro video games.
 
 ### Future Plan
 
-See [Issues](https://github.com/tk3fftk/pixel-retro-for-fitbit/issues)
+Please see [Issues](https://github.com/tk3fftk/pixel-retro-for-fitbit/issues)
