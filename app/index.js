@@ -5,7 +5,7 @@ import document from 'document';
 import { HeartRateSensor } from 'heart-rate';
 import { me } from 'appbit';
 import { preferences } from 'user-settings';
-import { today } from 'user-activity';
+import { today, primaryGoal } from 'user-activity';
 
 const imageNamePrefix = '32x32_';
 const imageExtension = '.png';
@@ -59,7 +59,7 @@ if (BodyPresenceSensor) {
 // Update the clock every minute
 clock.granularity = 'minutes';
 
-clock.ontick = evt => {
+clock.ontick = (evt) => {
   const d = evt.date;
   const mins = d.getMinutes();
   const hours = d.getHours();
@@ -105,12 +105,36 @@ if (display.aodAvailable && me.permissions.granted('access_aod')) {
 }
 
 function updateScore() {
-  const steps = today.adjusted.steps;
-  setOne(steps, score1);
-  setTen(steps, score2);
-  setHundred(steps, score3);
-  setThousand(steps, score4);
-  setTenThousand(steps, score5);
+  let entireScore = 0;
+  if (me.permissions.granted('access_activity')) {
+    const activity = today.adjusted;
+    switch (primaryGoal) {
+      case 'steps':
+        entireScore = activity.steps;
+        break;
+      case 'distance':
+        entireScore = activity.distance;
+        break;
+      case 'calories':
+        entireScore = activity.calories;
+        break;
+      case 'elevationGain':
+        entireScore = activity.elevationGain;
+        break;
+      case 'activeMinutes':
+        entireScore = activity.activeMinutes;
+        break;
+      default:
+        break;
+    }
+  }
+  // set 0 if undifined is returned
+  entireScore = entireScore || 0;
+  setOne(entireScore, score1);
+  setTen(entireScore, score2);
+  setHundred(entireScore, score3);
+  setThousand(entireScore, score4);
+  setTenThousand(entireScore, score5);
 }
 
 function setOne(val, target) {
