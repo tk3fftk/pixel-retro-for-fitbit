@@ -16,8 +16,7 @@
     "wipeColor": "#ffffff",
     "requestedPermissions": [
       "access_heart_rate",
-      "access_activity",
-      "access_aod"
+      "access_activity"
     ],
     "buildTargets": [
       "meson",
