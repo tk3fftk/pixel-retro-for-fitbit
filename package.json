@@ -28,7 +28,8 @@
   },
   "scripts": {
     "build": "fitbit-build",
-    "debug": "fitbit"
+    "debug": "fitbit",
+    "lint": "prettier --single-quote --trailing-comma es5 -l ./app"
   },
   "dependencies": {}
 }
