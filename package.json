@@ -9,7 +9,7 @@
     "prettier": "2.0.2"
   },
   "fitbit": {
-    "appUUID": "cfe36a3e-2d62-47ba-ae43-2de7a90300c7",
+    "appUUID": "a531b55c-2b2e-401a-8621-b05b6efe288f",
     "appType": "clockface",
     "appDisplayName": "Pixel Retro",
     "iconFile": "resources/icon.png",
