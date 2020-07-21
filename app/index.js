@@ -62,11 +62,10 @@ clock.granularity = 'minutes';
 clock.ontick = (evt) => {
   const d = evt.date;
   const mins = d.getMinutes();
-  const hours = d.getHours();
+  let hours = d.getHours();
   const date = d.getDate();
   const month = d.getMonth() + 1;
   if (preferences.clockDisplay === '12h') {
-    // 12h format
     hours = hours % 12 || 12;
   }
   setOne(mins, minutes1);
