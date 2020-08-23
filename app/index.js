@@ -7,6 +7,9 @@ import { me } from 'appbit';
 import { preferences } from 'user-settings';
 import { today, primaryGoal } from 'user-activity';
 
+const VISIBLE = 'visible';
+const HIDDEN = 'hidden';
+
 const imageNamePrefix = '32x32_';
 const imageExtension = '.png';
 const score1 = document.getElementById('score1');
@@ -22,6 +25,10 @@ const month1 = document.getElementById('month1');
 const month2 = document.getElementById('month2');
 const date1 = document.getElementById('date1');
 const date2 = document.getElementById('date2');
+const ante = document.getElementById('ante');
+const post = document.getElementById('post');
+const midday = document.getElementById('midday');
+const ampmElements = [ante, post, midday];
 
 let hrm;
 let body;
@@ -34,7 +41,7 @@ if (HeartRateSensor) {
 
     for (let i = 1; i <= 15; i++) {
       document.getElementById(`h${i}`).style.visibility =
-        numberOfHeart >= i ? 'visible' : 'hidden';
+        numberOfHeart >= i ? VISIBLE : HIDDEN;
     }
   });
   hrm.start();
@@ -66,7 +73,15 @@ clock.ontick = (evt) => {
   const date = d.getDate();
   const month = d.getMonth() + 1;
   if (preferences.clockDisplay === '12h') {
+    hours < 12
+      ? (ante.style.visibility = VISIBLE)
+      : (post.style.visibility = VISIBLE);
+    midday.style.visibility = VISIBLE;
     hours = hours % 12 || 12;
+  } else {
+    ampmElements.forEach((e) => {
+      e.style.visibility = HIDDEN;
+    });
   }
   setOne(mins, minutes1);
   setTen(mins, minutes2);

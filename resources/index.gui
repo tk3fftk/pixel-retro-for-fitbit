@@ -46,4 +46,10 @@
     <image id="minutes2" href="32x32_0.png" x="128" y="0"/>
     <image id="minutes1" href="32x32_0.png" x="192" y="0"/>
   </svg>
+  
+  <svg class="ampm font-mid">
+    <image id="ante" href="16x16_A.png" x="192" y="0"/>
+    <image id="post" href="16x16_P.png" x="192" y="0"/>
+    <image id="midday" href="16x16_M.png" x="224" y="0"/>
+  </svg>
 </svg>

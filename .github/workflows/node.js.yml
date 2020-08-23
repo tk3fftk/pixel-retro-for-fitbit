@@ -25,6 +25,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn
       - run: yarn run lint
+      - run: yarn run format
       - run: yarn run build --if-present
       - name: Upload as artifacts if this event is push
         uses: actions/upload-artifact@v2
