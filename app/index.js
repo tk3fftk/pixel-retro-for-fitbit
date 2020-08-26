@@ -73,9 +73,13 @@ clock.ontick = (evt) => {
   const date = d.getDate();
   const month = d.getMonth() + 1;
   if (preferences.clockDisplay === '12h') {
-    hours < 12
-      ? (ante.style.visibility = VISIBLE)
-      : (post.style.visibility = VISIBLE);
+    if (hours < 12) {
+      ante.style.visibility = VISIBLE;
+      post.style.visibility = HIDDEN;
+    } else {
+      ante.style.visibility = HIDDEN;
+      post.style.visibility = VISIBLE;
+    }
     midday.style.visibility = VISIBLE;
     hours = hours % 12 || 12;
   } else {
