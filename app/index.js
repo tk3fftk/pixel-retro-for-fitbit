@@ -102,25 +102,28 @@ clock.ontick = (evt) => {
 if (display.aodAvailable && me.permissions.granted('access_aod')) {
   // tell the system we support AOD
   display.aodAllowed = true;
-
-  // respond to display change events
-  display.addEventListener('change', () => {
-    // Is AOD inactive and the display is on?
-    if (!display.aodActive && display.on && HeartRateSensor) {
-      // Show elements & start sensors
+}
+// respond to display change events
+display.addEventListener('change', () => {
+  // Is AOD inactive and the display is on?
+  if (!display.aodActive && display.on) {
+    // Show elements & start sensors
+    if (HeartRateSensor) {
       hrm.start();
       showHearts();
-      document.getElementById('scoreArea').style.display = 'inline';
-      body.start();
-    } else {
-      // Hide elements & stop sensors
+    }
+    document.getElementById('scoreArea').style.display = 'inline';
+    body.start();
+  } else {
+    // Hide elements & stop sensors
+    if (HeartRateSensor) {
       hrm.stop();
       hideHearts();
-      document.getElementById('scoreArea').style.display = 'none';
-      body.stop();
     }
-  });
-}
+    document.getElementById('scoreArea').style.display = 'none';
+    body.stop();
+  }
+});
 
 function updateScore() {
   let entireScore = 0;
