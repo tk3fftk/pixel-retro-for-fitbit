@@ -1,6 +1,6 @@
 # pixel-retro-for-fitbit
 
-Pixel Retro Clock for Fitbit Versa
+Pixel Retro Clock for Fitbit Versa, Versa2
 
 <img src="./screenshot.png" width="400" />
 
